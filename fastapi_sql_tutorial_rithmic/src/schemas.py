@@ -16,7 +16,7 @@ class Post(_PostBase):
     date_last_updated: _dt.datetime 
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class _UserBase(_pydantic.BaseModel):
     email: str 
@@ -30,4 +30,4 @@ class User(_UserBase):
     posts: List[Post] = []
 
     class Config:
-        orm_mode = True
+        from_attributes = True
