@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    volumes:
+     - ./data/mysql:/var/lib/mysql
+    ports:
+     - '3336:3306'
+    environment:
+     MYQSL_ROOT_PASSWORD: 'root'
+     MYSQL_DATABSE: 'test'
+     MYSQL_USER: 'test'
+     MYSQL_PASSWORD: 'test'

@@ -1,0 +1,6 @@
+fastapi
+pymysql
+sqlalchemy
+strawberry-graphql[fastapi]
+uvicorn[standard]
+cryptography
