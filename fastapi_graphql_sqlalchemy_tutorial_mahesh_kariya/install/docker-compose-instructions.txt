@@ -1,8 +1,0 @@
-need to add **/venv/ to .gitignore for tutorials like this
-
-python -m venv venv
-source venv/bin/activate
-pip install -r install/requirements.txt
-
-
-sudo docker-compose up -d --build --remove-orphans
