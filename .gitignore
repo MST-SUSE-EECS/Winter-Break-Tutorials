@@ -1,5 +1,4 @@
 **/venv/
 **/.sdi
 **/__pycache__/
-**\\*\\
-**\data\
+**/data/
