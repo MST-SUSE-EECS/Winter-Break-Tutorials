@@ -1,0 +1,11 @@
+#pip install virtualenv
+#virtualenv venv 
+#source venv/bin/activate
+#pip install fastapi uvicorn sqlalchemy pymysql cryptography
+#this should have a 'faster' environment 
+mamba env create --file environment.yml
+conda activate fastapi_tutorial4_mahesh
+
+docker run --name mysqldb -d -p 3336:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=test mysql
+
+uvicorn index:app --reload

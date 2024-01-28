@@ -1,0 +1,9 @@
+name: fastapi_tutorial4_mahesh
+dependencies:
+ - pip
+ - pip:
+   - fastapi
+   - uvicorn
+   - sqlalchemy
+   - pymysql
+   - cryptography
