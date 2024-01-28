@@ -6,15 +6,13 @@ user = APIRouter()
 
 @user.get('/')
 def fetch_users():
-    return conn.execute(users.insert().values())
-
-@user.get('/')
-def fetch_users():
     return conn.execute(users.select()).fetchall()
 
 @user.post('/')
 def post_user(user: User):
-    return conn.execute(users.insert().values(name=user.name, email=user.email, password=user.password))
+    return [user.name, user.email, user.password]
+    #result = conn.execute(users.insert().values(name=user.name, email=user.email, password=user.password))
+    #return int(result.inserted_primary_key[0])
 
 @user.put('/{id}')
 def update_user(id: int, user: User):
